@@ -1,0 +1,32 @@
+﻿@model PracticaEF.Entities.Shippers
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row" style="margin-top:30px">
+    <div class="col-sm-12">
+
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h4>Delete Shipper</h4>
+            </div>
+            <div class="panel-body">
+                <div class="alert alert-danger">
+                    ¿Want yo remove the shipper: @Html.DisplayTextFor(m => m.CompanyName)  @Html.DisplayTextFor(m => m.CompanyName) ?
+                </div>
+
+                <form action="@Url.Action("Delete","Shippers")" method="post">
+                    <input type="hidden" class="form-control" name="ShipperID" value="@Html.DisplayTextFor(m => m.ShipperID)" />
+
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <a class="btn btn-warning" href="@Url.Action("Index","Shippers")">Return</a>
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+

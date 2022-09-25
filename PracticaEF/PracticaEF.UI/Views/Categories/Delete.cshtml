@@ -1,0 +1,32 @@
+﻿@model PracticaEF.Entities.Categories
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row" style="margin-top:30px">
+    <div class="col-sm-12">
+
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h4>Delete Shipper</h4>
+            </div>
+            <div class="panel-body">
+                <div class="alert alert-danger">
+                    ¿Want yo remove the shipper: @Html.DisplayTextFor(m => m.CategoryName)  @Html.DisplayTextFor(m => m.CategoryName) ?
+                </div>
+
+                <form action="@Url.Action("Delete","Categories")" method="post">
+                    <input type="hidden" class="form-control" name="categoryID" value="@Html.DisplayTextFor(m => m.CategoryID)" />
+
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <a class="btn btn-warning" href="@Url.Action("Index","Categories")">Return</a>
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+

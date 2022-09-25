@@ -1,0 +1,62 @@
+﻿@model IEnumerable<PracticaEF.Entities.Shippers>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div class="row" style="margin-top:30px">
+    <div class="col-sm-12">
+
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h4>Shippers list</h4>
+            </div>
+            <div class="panel-body">
+                <a class="btn btn-success" href="@Url.Action("Create","Shippers")">Create new</a>
+                <hr />
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.CompanyName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Phone)
+                                </th>
+
+                                <th style="width:150px"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.CompanyName</td>
+                                    <td>@item.Phone</td>
+
+                                    <td>
+                                        <a class="btn btn-primary btn-sm" href="@Url.Action("Edit","Shippers", new { id = item.ShipperID })">Edit</a>
+
+                                        <a class="btn btn-danger btn-sm" href="@Url.Action("Delete","Shippers", new { id = item.ShipperID })">Delete</a>
+
+                                    </td>
+
+                                </tr>
+
+                            }
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
