@@ -1,0 +1,71 @@
+﻿@model PracticaLinq.Entities.Products
+
+<p>
+    <a class="btn btn-warning" href="@Url.Action("Index","Home")">Returns</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SupplierID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuantityPerUnit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitsInStock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitsOnOrder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReorderLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Discontinued)
+        </th>
+        <th></th>
+    </tr>
+
+
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => Model.ProductName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.SupplierID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.CategoryID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.QuantityPerUnit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.UnitPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.UnitsInStock)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.UnitsOnOrder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.ReorderLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Discontinued)
+        </td>
+        
+    </tr>
+
+
+</table>

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<PruebaLinq.Entities.Dto.ProductsCategoriesDto>
+
+@{
+    ViewBag.Title = "Consulta11";
+}
+
+<h2>Consulta11</h2>
+
+<p>
+    <a class="btn btn-warning" href="@Url.Action("Index","Home")">Returns</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductName)
+        </td>
+        
+    </tr>
+}
+
+</table>

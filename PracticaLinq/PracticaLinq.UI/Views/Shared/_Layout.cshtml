@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="~/css/MasterStyles.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Northwind.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Consultas
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="@Url.Action("Consulta1","Consultas")">Consulta 1</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Consulta2","Consultas")">Consulta 2</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Consulta3","Consultas")">Consulta 3</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Consulta4","Consultas")">Consulta 4</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Consulta5","Consultas")">Consulta 5</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Consulta6","Consultas")">Consulta 6</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Consulta7","Consultas")">Consulta 7</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Consulta8","Consultas")">Consulta 8</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Consulta9","Consultas")">Consulta 9</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Consulta10","Consultas")">Consulta 10</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Consulta11","Consultas")">Consulta 11</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Consulta12","Consultas")">Consulta 12</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Consulta13","Consultas")">Consulta 13</a></li>
+                           
+
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav flex-row">
+                    <li class="nav-item">
+                        <a class="social-icon" href="#"><i class="ri-dribbble-line"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="social-icon" href="#"><i class="ri-github-line"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="social-icon" href="#"><i class="ri-instagram-line"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="social-icon" href="#"><i class="ri-youtube-line"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <!--<footer>
+            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+        </footer>-->
+        <footer>
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row gy-5">
+                        <div class="col-md-4">
+                            <h4><a href="#" class="text-white">Northwind</a></h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam accusantium vero sunt!</p>
+                            <ul class="navbar-nav flex-row">
+                                <li class="nav-item">
+                                    <a class="social-icon" href="#"><i class="ri-dribbble-line"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="social-icon" href="#"><i class="ri-github-line"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="social-icon" href="#"><i class="ri-instagram-line"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="social-icon" href="#"><i class="ri-youtube-line"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 ms-auto">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>Contact</h4>
+                            <ul>
+                                <li>Email: Northwind@example.com</li>
+                                <li>Phone: (+933-444-556)</li>
+                                <li>Address: Jezero Crater, Mars</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-auto">
+                            <p class="mb-0">Copyright @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+                        </div>
+                        <div class="col-auto">
+                            <p class="mb-0">Created by<a href="https://www.youtube.com/c/SA7MAN"> Ing.Damian Almada</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+
+    @RenderSection("scripts", required: false)
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="~/js/app.js"></script>
+</body>
+</html>
