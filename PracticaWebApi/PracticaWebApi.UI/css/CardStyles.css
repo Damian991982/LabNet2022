@@ -1,0 +1,43 @@
+﻿:root {
+    --light-color: #ccc;
+}
+
+body{
+    /*background-image:linear-gradient(135deg,#43CBFF 10%,#9708CC 100%)*/
+    background-color:var(--light-color);
+    
+}
+
+.card {
+    border: none;
+    outline: none;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: transform .3s;
+}
+.card:hover{
+    transform:translateY(-15px);
+    transition:transform .3s;
+}
+
+.text1{
+    font-size:13px;
+    color:black;
+}
+
+.info{
+    line-height:17px;
+}
+
+.start{
+    color:#fbc02d;
+}
+
+.cost span{
+    color:#fb3531;
+    font-weight:bold;
+    font-size:20px
+}
+.shoe {
+    background-image: linear-gradient(135deg,#9708CC,#43CBFF)
+}

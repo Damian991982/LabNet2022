@@ -1,0 +1,6 @@
+namespace PracticaWebApi.UI.Areas.HelpPage.ModelDescriptions
+{
+    public class SimpleTypeModelDescription : ModelDescription
+    {
+    }
+}
