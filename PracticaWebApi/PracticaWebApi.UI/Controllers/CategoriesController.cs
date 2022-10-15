@@ -9,9 +9,11 @@ using PracticaWebApi.Entities;
 using PracticaWebApi.Service;
 using System.Web.Http.Description;
 using PracticaWebApi.UI.Models;
+using System.Web.Http.Cors;
 
 namespace PracticaWebApi.UI.Controllers
 {
+    [EnableCors(origins: "http://localhost:4200",headers:"*",methods:"*")]
     public class CategoriesController : ApiController
     {
         private CategoriesService categoriesService;
